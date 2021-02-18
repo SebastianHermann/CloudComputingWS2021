@@ -9,6 +9,14 @@ require('dotenv/config');
 app.use(cors());
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../Frontend/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../Frontend', 'build', 'index.html'));
+  });
+}
+
 //IMPORT Routes
 const notesRoute = require('./routes/notes');
 
@@ -27,14 +35,6 @@ mongoose
   })
   .then(() => console.log('Database Connected Successfully'))
   .catch((err) => console.log(err));
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../Frontend/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../Frontend', 'build', 'index.html'));
-  });
-}
 
 //HOW do we start listening to the server
 const port = process.env.PORT || 5000;
