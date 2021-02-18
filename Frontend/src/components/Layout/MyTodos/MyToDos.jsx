@@ -43,7 +43,7 @@ export default function MyToDos(props) {
 
   const loadData = async () => {
     setLoading(true);
-    const response = await fetch(`http://localhost:3001/notes/user`, {
+    const response = await fetch(`/notes/user`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

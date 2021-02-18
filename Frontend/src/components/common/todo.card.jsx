@@ -58,7 +58,8 @@ export default function ToDoCard(props) {
   };
 
   const setDoneToDo = async () => {
-    await fetch(`http://localhost:3001/notes/${note._id}`, {
+    // await fetch(`http://localhost:3001/notes/${note._id}`, {
+    await fetch(`/notes/${note._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

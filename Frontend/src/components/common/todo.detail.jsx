@@ -66,7 +66,8 @@ export default function ToDoDetail(props) {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3001/notes/${note._id}`, {
+    // fetch(`http://localhost:3001/notes/${note._id}`, {
+    fetch(`notes/${note._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -71,7 +71,7 @@ export default function ToDoForm(props) {
     }
 
     !note._id
-      ? await fetch('http://localhost:3001/notes', {
+      ? await fetch('/notes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default function ToDoForm(props) {
         })
           .then(setNote(props.note))
           .then(() => props.handleSave())
-      : await fetch(`http://localhost:3001/notes/${note._id}`, {
+      : await fetch(`/notes/${note._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
