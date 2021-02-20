@@ -82,15 +82,19 @@ export default function History(props) {
               <Grid item xs={6}>
                 <div className={classes.searchPanel}>
                   <Grid container spacing={1} alignItems="flex-end">
-                    <Grid item>
+                    {/* <Grid item>
                       <SearchIcon />
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
-                      <TextField
+                      {/* <TextField
                         id="input-with-icon-grid"
-                        placeholder="Search..."
+                        placeholder="A project by business informatics students at Stuttgart Media University."
                         onChange={(event) => handleSearchChange(event)}
-                      />
+                      /> */}
+                      <Typography variant="subtitle1">
+                        A project by business informatics students @HdM
+                        Stuttgart.
+                      </Typography>
                     </Grid>
                   </Grid>
                 </div>

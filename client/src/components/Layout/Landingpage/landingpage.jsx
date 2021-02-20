@@ -89,7 +89,7 @@ export default function Landingpage(props) {
                     onSuccess={responseGoogleOk}
                     onFailure={responseGoogleFail}
                     cookiePolicy={'single_host_origin'}
-                    redirectUri="http://localhost:3000/history"
+                    // redirectUri="/history"
                   />
                 </div>
               </Grid>

@@ -14,11 +14,6 @@ const notesRoute = require('./routes/notes');
 
 app.use('/notes', notesRoute);
 
-// //ROUTES
-// app.get('/', (req, res) => {
-//   res.send('TODO-API');
-// });
-
 mongoose
   .connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
