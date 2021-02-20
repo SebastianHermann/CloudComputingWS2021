@@ -92,9 +92,13 @@ export default function History(props) {
                         onChange={(event) => handleSearchChange(event)}
                       /> */}
                       <Typography variant="subtitle1">
-                        A Cloud Computing Project{' '}
-                        <a href="https://www.hdm-stuttgart.de/wib">
-                          @ HdM Stuttgart
+                        A Cloud Computing Project @
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.hdm-stuttgart.de/wib"
+                        >
+                          HdM Stuttgart
                         </a>
                         .
                       </Typography>
