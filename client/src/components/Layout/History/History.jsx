@@ -92,8 +92,11 @@ export default function History(props) {
                         onChange={(event) => handleSearchChange(event)}
                       /> */}
                       <Typography variant="subtitle1">
-                        A project by business informatics students @HdM
-                        Stuttgart.
+                        A Cloud Computing Project{' '}
+                        <a href="https://www.hdm-stuttgart.de/wib">
+                          @ HdM Stuttgart
+                        </a>
+                        .
                       </Typography>
                     </Grid>
                   </Grid>
