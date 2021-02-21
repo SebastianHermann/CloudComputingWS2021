@@ -11,6 +11,7 @@ import {
   AiOutlineSortDescending,
 } from 'react-icons/ai';
 import IconButton from '@material-ui/core/IconButton';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -150,17 +151,19 @@ export default function MyToDosList(props) {
           </Grid>
         </div>
       </Grid>
-      {props.loading
-        ? 'Loading...'
-        : sorted.map((note) => (
-            <Grid item lg={6} md={12}>
-              <ToDoCard
-                key={note._id}
-                note={note}
-                handleReload={props.handleReload}
-              />
-            </Grid>
-          ))}
+      {props.loading ? (
+        <CircularProgress />
+      ) : (
+        sorted.map((note) => (
+          <Grid item lg={6} md={12}>
+            <ToDoCard
+              key={note._id}
+              note={note}
+              handleReload={props.handleReload}
+            />
+          </Grid>
+        ))
+      )}
     </React.Fragment>
   );
 }
