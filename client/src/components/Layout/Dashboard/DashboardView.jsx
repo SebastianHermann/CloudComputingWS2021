@@ -147,7 +147,7 @@ export default function DashboardView() {
               <Grid item xs={12}>
                 <div className={classes.subTitlePanel}>
                   <Typography variant="subtitle1">
-                    Here you can see all your to-do's that are either still open
+                    Here you can see all your to-dos that are either still open
                     or already done.
                   </Typography>
                 </div>

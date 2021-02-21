@@ -53,26 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MyToDosList(props) {
   const classes = useStyles();
-  // const [data, setData] = useState([]);
-  // const [resultData, setResultData] = useState();
-  // const [loading, setLoading] = useState(true)
   const [sortProperty, setSortProperty] = useState('title');
   const [sortAsc, setSortAsc] = useState(true);
-
-  // useEffect(() => {
-  //   console.log('in searchtext effect');
-  //   if (props.loading == false && searchText.length > 0) {
-  //     let result = props.data.filter(
-  //       (note) =>
-  //         note.title.toLowerCase().includes(searchText.toLowerCase()) ||
-  //         note.category.toLowerCase().includes(searchText.toLowerCase()) ||
-  //         note.description.toLowerCase().includes(searchText.toLowerCase())
-  //     );
-  //     setResultData(result);
-  //   } else if (props.loading == false && searchText.length === 0) {
-  //     setResultData(props.data);
-  //   }
-  // }, [searchText]);
 
   const handleSortPropertyChange = (event) => {
     setSortProperty(event.target.value);
@@ -97,7 +79,7 @@ export default function MyToDosList(props) {
         <div className={classes.countPanel}>
           <Typography variant="subtitle1">
             <span style={{ fontWeight: 'bold' }}>
-              {props.loading ? 'Loading...' : openToDos.length + " To-Do's."}
+              {props.loading ? 'Loading...' : openToDos.length + ' To-Dos.'}
             </span>
           </Typography>
         </div>

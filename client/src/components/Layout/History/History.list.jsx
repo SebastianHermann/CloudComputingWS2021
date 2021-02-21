@@ -53,28 +53,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HistoryList(props) {
   const classes = useStyles();
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const [sortProperty, setSortProperty] = useState('title');
   const [sortAsc, setSortAsc] = useState(true);
-
-  // const loadData = async () => {
-  //   let data = await fetch(`http://localhost:3001/notes/user`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({ creator: props.user.googleId }),
-  //   }).then((data) => data.json());
-  //   setData(data);
-  // };
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   loadData();
-  //   setLoading(false);
-  // }, [data]);
 
   const handleSortPropertyChange = (event) => {
     setSortProperty(event.target.value);
@@ -98,7 +79,7 @@ export default function HistoryList(props) {
         <div>
           <Typography variant="subtitle1">
             <span style={{ fontWeight: 'bold' }}>
-              {props.loading ? 'Loading...' : doneToDos.length + " To-Do's."}
+              {props.loading ? 'Loading...' : doneToDos.length + ' To-Dos.'}
             </span>
           </Typography>
         </div>

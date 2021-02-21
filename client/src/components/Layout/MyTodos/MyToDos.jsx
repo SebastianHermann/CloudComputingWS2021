@@ -6,8 +6,6 @@ import AddIcon from '@material-ui/icons/Add';
 import Typography from '@material-ui/core/Typography';
 import MyToDosList from './MyToDos.list';
 import ToDoForm from '../../common/todo.form';
-import SearchIcon from '@material-ui/icons/Search';
-import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -125,7 +123,7 @@ export default function MyToDos(props) {
             <Grid container spacing={0}>
               <Grid item xs={6}>
                 <div className={classes.titlePanel}>
-                  <Typography variant="h3">My To-Do's</Typography>
+                  <Typography variant="h3">My To-Dos</Typography>
                 </div>
               </Grid>
               <Grid item xs={6}>

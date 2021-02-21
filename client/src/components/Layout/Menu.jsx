@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import HistoryIcon from '@material-ui/icons/History';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Menu(props) {
   const classes = useStyles();
+  const location = useLocation();
 
   return (
     <Grid container spacing={1} className={classes.root}>
@@ -74,7 +75,7 @@ export default function Menu(props) {
               <AssignmentIcon />
             </div>
             <div className={classes.menuText}>
-              <span style={{ textDecoration: 'none' }}>Meine Notizen</span>
+              <span style={{ textDecoration: 'none' }}>My To-Dos</span>
             </div>
           </div>
         </Link>
