@@ -39,7 +39,7 @@ export default function ToDoForm(props) {
   };
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3001/notes/${note._id}`, {
+    await fetch(`/notes/${note._id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
